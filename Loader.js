@@ -5,7 +5,7 @@
  */
 (function (w, d) {
     function packCode(txt, path) {
-        if(txt.indexOf('module') > -1){
+        if (txt.indexOf('module') > -1) {
             return `\n/*${path}*/\n(function(){let module = {};\n${txt}\nreturn module;\n})();\n`
         }
         return `\n/*${path}*/\n(function(){\n${txt}\n})();\n`
@@ -31,7 +31,7 @@
             this.one_by_one(path, this.tree);
         }
         one_by_one(path, tree) {
-            if(this.recuried.indexOf(path)>-1){
+            if (this.recuried.indexOf(path) > -1) {
                 return
             }
             // 已被递归过的;
@@ -50,12 +50,12 @@
                                 let reqPath = exact[2];
                                 subTree[reqPath] = {};
                             }
-                            console.log(JSON.stringify(this.tree),this.tree);
+                            console.log(JSON.stringify(this.tree), this.tree);
                         })
                         // 递归
                         .then(() => {
                             Object.keys(subTree).forEach(sub => {
-                                console.log('递归',sub)
+                                console.log('递归', sub)
                                 this.one_by_one(sub, subTree)
                             });
                         })

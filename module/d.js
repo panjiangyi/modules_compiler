@@ -1,4 +1,4 @@
-var e = require('./module/e.js');
+var e = require('./e.js');
 e.say();
 console.log('d loaded!')
-module = 'wo shi d';
+module.exports = 'wo shi d';
