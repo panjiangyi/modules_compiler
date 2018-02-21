@@ -42,7 +42,6 @@
                     respone.text()
                         .then(txt => {
                             this.replace(txt, path);
-                            // console.log(this.code);
                             const reg = /var\s\w+\s?=\s?require\(\s?(['"])([-./\w]+)\1\)[;\n]/gm;
                             let exact = '';
                             while (exact != null) {
