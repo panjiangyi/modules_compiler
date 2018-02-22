@@ -1,7 +1,7 @@
 let _module = new Object();
 let _exports = _module.exports = new Object();
-/*c:/workspace/modulesLoader/module/e.js*/
-_exports['c:/workspace/modulesLoader/module/e.js'] = (function(){let module =  {},exports=module.exports={};
+/*c:/workspace/modulesLoader/module/sub/e.js*/
+_exports['c:/workspace/modulesLoader/module/sub/e.js'] = (function(){let module =  {},exports=module.exports={};
 var d = _exports["c:/workspace/modulesLoader/module/d.js"];
 console.log('e的D',d);
 exports.say = function(){
@@ -12,7 +12,7 @@ console.log('e loaded!');return exports;
 
 /*c:/workspace/modulesLoader/module/d.js*/
 _exports['c:/workspace/modulesLoader/module/d.js'] = (function(){let module =  {},exports=module.exports={};
-var e = _exports["c:/workspace/modulesLoader/module/e.js"];
+var e = _exports["c:/workspace/modulesLoader/module/sub/e.js"];
 e.say();
 console.log('d loaded!')
 module.exports = 'wo shi d';;return exports;
@@ -36,7 +36,7 @@ console.log('c of b:',c);return exports;
 _exports['c:/workspace/modulesLoader/module/a.js'] = (function(){let module =  {},exports=module.exports={};
    var b = _exports["c:/workspace/modulesLoader/module/b.js"];
 var d = _exports["c:/workspace/modulesLoader/module/d.js"];
-var e = _exports["c:/workspace/modulesLoader/module/e.js"];
+var e = _exports["c:/workspace/modulesLoader/module/sub/e.js"];
 e.say();
 console.log('a loaded!');return exports;
 })();
