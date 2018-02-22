@@ -1,4 +1,5 @@
-let fs = require('fs');
+const fs = require('fs');
+const {out,entry} = require('./config.json'); 
 /* 
  *  全局对象 module、exports用于导出模块
  *  正则解析require方法，来加载模块
@@ -106,11 +107,11 @@ class Module {
         this.bundle();
     }
     bundle() {
-        fs.writeFile('./bundle.js', this.code, (err) => {
+        fs.writeFile(out, this.code, (err) => {
             if (err) throw err;
             console.log('The bundle has been saved!');
         });
     }
 }
 let loader = new Module();
-loader.require('./module/a.js');
+loader.require(entry);
