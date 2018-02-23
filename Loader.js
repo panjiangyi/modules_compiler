@@ -1,10 +1,6 @@
 const fs = require('fs');
 const {out,entry} = require('./config.json'); 
-/* 
- *  全局对象 module、exports用于导出模块
- *  正则解析require方法，来加载模块
- * })
- */
+
 // 处理相对路径
 let cwd = process.cwd().replace(/\\/g, '/') + '/';
 function relativePath(cur, rel) {
